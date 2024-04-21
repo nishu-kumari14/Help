@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Pharmacy Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        body {
+            background-image: url('pharm3.JPEG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            height: 100vh;
+            width: 100%;
+        }
+        /* Custom CSS for navbar items */
+        .custom_card .btn {
+    /* color: blue; */
+    background-color: green;
+}
+.custom_card .btn:hover {
+    /* color: goldenrod; */
+    background-color: green;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Online Pharmacy Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportContent" aria-controls="navbarSupportContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0 " id="navbarSupportContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/adduser">Add Product Name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/data">View Product Details</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/history">Transfer History</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Card Container Start -->
+    <div class="container my-4 custom_card">
+        <!-- Add User Card -->
+        <div class="all_customers card bg-dark">
+            <div class="icon">
+                <i class="fas fa-user-plus text-light"></i>
+            </div>
+            <div class="icon_link text-center bg-light">
+                <a href="/adduser" class="btn btn-light cus_in_btn text-dark"><h5>Add Product Name</h5></a>
+            </div>
+        </div>
+    
+        <!-- View User Card -->
+        <div class="all_customers card bg-dark">
+            <div class="icon">
+                <i class="fas fa-users text-light"></i>
+            </div>
+            <div class="icon_link text-center bg-light">
+                <a href="/data" class="btn btn-light cus_in_btn text-dark"><h5>All Customers</h5></a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted text-light fixed-bottom cus-foor">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color:rgba(230, 14, 14, 0.5);">
+            &copy; 2024 CopyRight:
+            <a class="text-reset fw-bold " href="#">Online Pharmacy Store</a>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

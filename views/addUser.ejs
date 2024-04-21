@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./components/headTag') -%>
+   <style>
+    body {
+        background-image: url('pharm1.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        height: 100vh;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <%- include('./components/navbar') -%>
+        <!-- - Back to all users -->
+
+        <div class="container mt-2">
+          <a href="/" class="btn btn-secondary fw-bold ">&larr; Back</a>
+      </div>
+
+<div class="container mt-5">
+
+     <!-- - Alert msg -->
+     <% if(msg !="" ){%>
+      <div class="alert alert-success text-center " role="alert" id="addMsg">
+
+          <%=msg %>
+      </div>
+
+
+      <%} %>
+
+  <div class="container mt-5 bg-primary text-center text-light fw-30 p-2">
+    <h3>Add Product And Customer Details</h3>
+  </div>
+<form action="/adduser" method="POST" >
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1"><h5>Entered Medicine Name</h5></label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userName" placeholder="Enter Product Name" required>
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputEmail1"><h5>Email address</h5></label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userEmail" placeholder="Enter User Email">
+     
+    </div>
+    <div class="form-group  mt-3">
+      <label for="exampleInputPassword1"><h5>Enter Mobile Number</h5></label>
+      <input type="number" class="form-control" id="exampleInputPassword1" name="userNumber" placeholder="Enter User Contact ">
+
+    </div>
+    <div class="form-group  mt-3">
+        <label for="exampleInputEmail1"><h5>Entered Price</h5></label>
+        <input type="Amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userAmount" placeholder="Enter Price">
+    <button type="submit" class="btn btn-primary mt-3 text-center"><h5>ADD TO CART</h5></button>
+  </form>
+</div>
+
+    <%- include('./components/bootstrapScript') -%>
+    <script>
+        let alert = document.getElementById('addMsg');
+    setTimeout(() => {
+        alert.style.visibility = "hidden"
+    }, 2000)
+    </script>
+</body>
+</html>
